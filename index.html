@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="C:/Users/jazae/Desktop/Proyecto/src/Logo.jpeg" alt="Logo">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a class="active" href="#inicio">Inicio</a></li>
+                    <li><a href="#acerca">Acerca de Nosotros</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#formulario">Formulario</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="container">
+                <h1 class="name">Novedades SAM</h1>
+                <p class="description">Algo nuevo, Vida nueva</p>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </section>
+
+        <section id="acerca">
+            <div class="container">
+                <h2 class="nosotros">Acerca de Nosotros</h2>
+                <p class="nos_descripcion">"Somos una micro empresa que resalta por su alta calidad
+                    y elegancia en sus productos, ten en cuenta que todo lo que desees esta
+                    aqui­. Tenemos en cuenta toda aquella necesidad que surja durante todo esta temporada.<br>
+                    Sabi­as que el 91% de los consumidores tiene mas probabilidades de comprar
+                    con marcas que les reconocen y brindan ofertas o recomendaciones relevantes.
+                    Por lo tanto, Nuestra empresa esta a la vuelta a un paso de querer ofrecerte el mejor
+                    servicio, ten en cuenta la personalizacion y la perfeccion lo tenemos, Ya no pierdas
+                    mas el tiempo buscando algo <br>¡TODO LO TENEMOS AQUI!"</p>
+                    
+                </div>
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </section>
+
+        <section id="galeria">
+            <div class="container">
+                <h2>Galería</h2>
+                <div class="gallery">
+                    <img src="C:/Users/jazae/Desktop/Proyecto/src/G1.jpg" alt="Imagen 1">
+                    <img src="C:/Users/jazae/Desktop/Proyecto/src/G2.jpg" alt="Imagen 2">
+                    <img src="C:/Users/jazae/Desktop/Proyecto/src/G3.jpg" alt="Imagen 3">
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </section>
+
+        <section id="productos">
+            <div class="container">
+                <h2>Productos</h2>
+                <div class="wrapper">
+                    <div class="items">
+                        <div class="item" style="background-image: url('src/P1.jpg');"></div>
+                        <div class="item" style="background-image: url('C:/Users/jazae/Desktop/Proyecto/src/P2.jpg');"></div>
+                        <div class="item" style="background-image: url('C:/Users/jazae/Desktop/Proyecto/src/P3.jpg');"></div>
+                        <div class="item" style="background-image: url('C:/Users/jazae/Desktop/Proyecto/src/P4.jpg');"></div>
+                        <div class="item" style="background-image: url('C:/Users/jazae/Desktop/Proyecto/src/P5.jpg');"></div>
+                        <div class="item" style="background-image: url('C:/Users/jazae/Desktop/Proyecto/src/P6.jpg');"></div>
+                        <div class="item" style="background-image: url('C:/Users/jazae/Desktop/Proyecto/src/P7.jpg');"></div>
+                        <div class="item" style="background-image: url('C:/Users/jazae/Desktop/Proyecto/src/P8.jpg');"></div>
+                        <div class="item" style="background-image: url('C:/Users/jazae/Desktop/Proyecto/src/P9.jpg');"></div>
+                        <div class="item" style="background-image: url('C:/Users/jazae/Desktop/Proyecto/src/P10.jpg');"></div>
+                        <div class="item" style="background-image: url('C:/Users/jazae/Desktop/Proyecto/src/P11.jpg');"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formulario">
+            <div class="container">
+                <h2>Formulario</h2>
+                <form action="#" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
+                    <label for="Edad">Edad:</label>
+                    <input type="text" id="Edad" name="Edad" required><br><br>
+                    <label for="Dirección">Dirección:</label>
+                    <input type="text" id="Dirección" name="Dirección" required><br><br>
+                    <label for="email">Interés:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <button type="submit"><p>Enviar</p></button>
+                    <p class="aviso"><span class="obligatorio">* </span>los campos son obligatorios.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mi Proyecto</p>
+        </div>
+    </footer>
+
+    <script>
+        function setActiveNavLink() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                const scrollPosition = window.scrollY;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    const sectionId = section.getAttribute('id');
+                    const navLink = document.querySelector(`nav a[href="#${sectionId}"]`);
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    navLink.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('load', setActiveNavLink);
+        window.addEventListener('scroll', setActiveNavLink);
+    </script>
+
+</body>
+</html>

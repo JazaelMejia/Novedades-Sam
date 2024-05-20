@@ -1,0 +1,350 @@
+body {
+  background-image: url('C:/Users/jazae/Desktop/Proyecto/src/Fondo.JPG');
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.navbar {
+  height: 80px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.name {
+  /*font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff96;
+  text-shadow:
+    0 0 5px #ffffff7c,
+    0 0 10px #ffffff86,
+    
+
+    0 0 40px rgb(255, 0, 221);
+    font-size: 130px;
+    font-style: italic;*/
+
+    font-size: 140px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+  padding: 10px;
+  font-style: italic;
+
+}
+
+.description {
+  font-size: 45px;
+}
+
+.nos_descripcion{
+  font-size: 23px;
+}
+
+.nosotros{
+  font-size: 60px;
+}
+
+nav ul {
+  float: left;
+  margin-left: 20px;
+}
+
+nav ul li {
+  list-style: none;
+  line-height: 40px;
+  display: inline-block;
+  margin: 8px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 6px 13px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+  background: palevioletred;
+  border-radius: 20px;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  display: inline;
+  font-size: 24px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+main {
+  text-align: center;
+}
+
+section {
+  padding: 50px 0;
+}
+
+section h2 {
+  font-size: 32px;
+  color: #fff;
+  font-size: 45px;
+}
+
+section p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.gallery, .product-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img, .product-images img {
+  margin: 10px;
+  max-width: 300px;
+  max-height: 200px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.container {
+  position: relative;
+}
+
+.container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/* Agrega este CSS al archivo style.css */
+
+/* Estilos generales para el contenedor del formulario */
+#formulario .container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 60px;
+  background-color: #ffffff34;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el título del formulario */
+#formulario h2 {
+  font-size: 40px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Estilo para las etiquetas */
+#formulario label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #fff6f6;
+}
+
+/* Estilo para los campos de entrada de texto */
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario input[type="tel"],
+#formulario input[type="url"],
+#formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ab4493;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+}
+
+/* Estilo para el botón de enviar */
+#formulario button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #ab4493;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Estilo para el texto del botón */
+#formulario button p {
+  margin: 0;
+}
+
+/* Estilo para el mensaje de campos obligatorios */
+#formulario .aviso {
+  font-size: 13px;
+  color: #0e0e0e;
+  text-align: center;
+}
+
+/* Estilo para los placeholders de los campos de entrada */
+#formulario input::placeholder,
+#formulario textarea::placeholder {
+  color: #a8a8a8;
+}
+
+/* Estilos de enfoque para los campos de entrada */
+#formulario input:focus,
+#formulario textarea:focus {
+  outline: none;
+  border-color: #97d848;
+}
+
+
+
+
+
+
+/* Carrusel CSS */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
+}
+
+.items {
+  display: flex;
+  gap: 0.4rem;
+  perspective: calc(var(--index) * 35);
+}
+
+.item {
+  width: calc(var(--index) * 3);
+  height: calc(var(--index) * 12);
+  background-color: #222;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  filter: grayscale(1) brightness(.5);
+  transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
+  will-change: transform, filter, rotateY, width;
+  position: relative;
+}
+
+.item::before, .item::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: calc(var(--index) * -1);
+}
+
+.item::after {
+  left: calc(var(--index) * -1);
+}
+
+.items .item:hover {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 10));
+}
+
+.items .item:hover + * {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+  z-index: -1;
+}
+
+.items .item:hover + * + * {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
+  z-index: -2;
+}
+
+.items .item:hover + * + * + * {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
+  z-index: -3;
+}
+
+.items .item:hover + * + * + * + * {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
+  z-index: -4;
+}
+
+.items .item:has( + :hover) {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
+}
+
+.items .item:has( + * + :hover) {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+}
+
+.items .item:has( + * + * + :hover) {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
+}
+
+.items .item:has( + * + * + * + :hover) {
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * .6)) rotateY(-15deg);
+}
+
+.items .item:active, .items .item:focus {
+  width: 28vw;
+  filter: inherit;
+  z-index: 100;
+  transform: translateZ(calc(var(--index) * 10));
+  margin: 0 .45vw;
+}
+
+
